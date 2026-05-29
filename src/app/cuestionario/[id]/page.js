@@ -2,6 +2,8 @@ import Link from 'next/link';
 import connectMongo from '@/lib/mongodb';
 import Cuestionario from '@/lib/models/Cuestionario';
 
+export const dynamic = 'force-dynamic';
+
 export default async function CuestionarioPage({ params }) {
   await connectMongo();
   const { id } = await params;
